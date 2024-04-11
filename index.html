@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<form id="form">
+    <fieldset>
+        <legend> Sign up </legend>
+        <label for="realName">Name: </label><br>
+        <input type="text" id="realName" onblur="borderChange(this)" onclick="onClick(this)"><br><br>
+            
+        <label for="username">Preferred username: </label><br>
+        <input type="text" id="username" onblur="borderChange(this)" onclick="onClick(this)"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" onblur="borderChange(this)" onclick="onClick(this)"><br><br>
+
+        <label for="password">Password: </label><br>
+        <input type="password" id="password" onblur="borderChange(this)" onclick="onClick(this)"><br><br>
+
+        <label for="gender">Gender: </label><br>
+        <select id="gender" onblur="borderChange(this)">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Prefer not to mention</option>
+        </select><br><br>
+
+        <label for="address">Address: </label><br>
+        <input type="text" id="address" onblur="borderChange(this)" onclick="onClick(this)"><br><br>
+
+        <label for="interests">Interests: </label><br>
+        <textarea id="interests" cols="60" rows="5" onblur="borderChange(this)" onclick="onClick(this)"></textarea><br><br><br><br>
+
+        <input id="reset" type="reset" value="Reset" onclick="resetForm()"><br><br>
+        <input id="submit" type="submit" value="Submit" onclick="display(); return false">
+
+        
+    </fieldset>
+    <div id="output" class="container"></div>
+</form>
+
+<script>
+    function borderChange(element) {
+            if (element.value === ""){
+                element.style.border="solid red";
+            }
+            else{
+                element.style.border="solid green";
+            }
+    }
+    function onClick(element) {
+        element.style.border="";
+    }
+
+    function resetForm() {
+        document.getElementById("output").innerHTML = "";
+    }
+
+    function display() {
+        var name = document.getElementById("realName").value;
+        var user = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("password").value;
+        var gender = document.getElementById("gender").value;
+        var address = document.getElementById("address").value;
+        var int = document.getElementById("interests").value;
+        var output = document.getElementById("output");
+
+        output.innerHTML="Submitted data: <br><br>" + "Name: " + name + "<br>Username: " + user + "<br>Email: " + email + "<br>Password: " + pass + "<br>Gender: " + gender + "<br>Address: " + address + "<br>Interests: " + int;
+    }
+</script>
+
+</body>
+</html>

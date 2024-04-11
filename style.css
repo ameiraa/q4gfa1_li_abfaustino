@@ -1,0 +1,63 @@
+body{
+    font-family: cursive;
+}
+
+form{
+    margin: auto;
+    border: 2px solid;
+    border-radius: 25px;
+    max-width: 500px;
+    padding: 25px;
+    padding-right: 50px;
+    background-color: rgb(154, 121, 243);
+}
+
+fieldset{
+    border: none;
+}
+
+legend{
+    font-size: 2vw;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-stretch: extra-expanded;
+}
+
+input{
+    border-radius: 5px;
+    width: 100%;
+    padding: 7.5px;
+}
+
+select{
+    border-radius: 5px;
+    width: 100%;
+    padding: 7.5px;
+}
+
+textarea{
+    border-radius: 5px;
+    width: 100%;
+    padding: 7.5px;
+}
+
+.container{
+    background-color: white;
+    margin: auto;
+    margin-top: 75px;
+    border: 2px solid;
+    border-radius: 25px;
+    max-width: 500px;
+    padding: 25px;
+    padding-right: 50px;
+}
+
+#reset{
+    background-color: rgb(233, 55, 55);
+    font-weight: bolder;
+}
+
+#submit{
+    background-color: rgb(65, 221, 65);
+    font-weight: bolder;
+}
